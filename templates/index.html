@@ -11,7 +11,7 @@
         <div class="formbold-main-wrapper">
             <!-- Author: FormBold Team -->
             <div class="formbold-form-wrapper">
-                
+                <label for="message" id="hostname" class="formbold-form-label">Response from: {{hostname}}</label>
         
                 <div class="formbold-textarea">
                     <textarea
@@ -24,10 +24,6 @@
                     <label for="message" class="formbold-form-label"> English Text </label>
                 </div>
         
-                
-                <!-- <button id="Translate-btn" class="formbold-btn">
-                    Translate
-                </button> -->
             <br><br>
             <div class="formbold-textarea">
         
@@ -107,6 +103,10 @@
             line-height: 24px;
             display: block;
             margin-bottom: 18px;
+            }
+
+            #hostname {
+                font-size: 20px;
             }
             .formbold-form-input:focus + .formbold-form-label {
             color: #6A64F1;

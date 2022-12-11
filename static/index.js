@@ -1,25 +1,6 @@
 $(document).ready(function(){
-	// $('#Translate-btn').click(function(){
-    //     console.log('cliquei')
-	// 	var input = $('#input').val();
-    //     console.log(input)
-	// 	$.ajax({
-	// 		url: '/',
-    //         contentType: 'application/json;charset=UTF-8',
-            
-    //         data : input,
-	// 		type: 'POST',
-	// 		success: function(response){
-    //             const output = document.getElementById('output');
-    //             output.textContent = response
-	// 			console.log(response);
-	// 		},
-	// 		error: function(error){
-	// 			console.log(error);
-	// 		}
-	// 	});
-	// });
     const output = document.getElementById('output');
+    const hostname = document.getElementById('hostname');
 
     $('#input').on('input', function() {
 		var input = $('#input').val();
@@ -33,7 +14,9 @@ $(document).ready(function(){
                 data : input,
                 type: 'POST',
                 success: function(response){
-                    output.textContent = response
+                    // console.log(response)
+                    output.textContent = response['translated_text']
+                    // hostname.textContent = response['hostname']
                 },
                 error: function(error){
                     console.log(error);
