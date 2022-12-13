@@ -1,8 +1,8 @@
 $(document).ready(function(){
     const output = document.getElementById('output');
-    const hostname = document.getElementById('hostname');
 
-    $('#input').on('input', function() {
+    // $('#input').on('input', function() {
+    $('#input').focusout(function() {
 		var input = $('#input').val();
         input = input.trim()
 
@@ -14,9 +14,7 @@ $(document).ready(function(){
                 data : input,
                 type: 'POST',
                 success: function(response){
-                    // console.log(response)
                     output.textContent = response['translated_text']
-                    // hostname.textContent = response['hostname']
                 },
                 error: function(error){
                     console.log(error);
